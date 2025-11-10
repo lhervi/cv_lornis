@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Re</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Configuración de fuente y estilos base */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0d1117; /* Fondo oscuro tipo GitHub */
+      }
+      .accordion-content {
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        overflow: hidden;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .accordion-content.active {
+        max-height: 1000px; /* Suficiente altura para el contenido */
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .rotated-icon {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto">
+      <!-- Encabezado del Panel -->
+      <header class="text-center mb-10 p-6 bg-gray-800 rounded-xl shadow-2xl">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-2">
+          Panel de Estrategia Ejecutiva
+        </h1>
+        <p class="text-xl text-gray-400">Liderazgo, Ejecución y Optimización</p>
+      </header>
+
+      <!-- Resumen Ejecutivo -->
+      <div
+        class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8 border border-green-500/50">
+        <h2 class="text-2xl font-bold text-green-400 mb-3">
+          Resumen Ejecutivo
+        </h2>
+        <p class="text-gray-300">
+          Gestión de proyectos, RRHH, Optimización y Experiencia en ámbito
+          petrolero
+        </p>
+      </div>
+
+      <!-- ACORDEÓN DE PILARES -->
+      <div id="strategy-accordion">
+        <!-- Pilar 1: Gestión de Proyectos -->
+        <div
+          class="mb-4 bg-gray-700 rounded-xl shadow-xl transition duration-300 hover:shadow-green-500/30">
+          <button
+            class="accordion-header flex justify-between items-center w-full p-6 text-left text-white font-semibold text-xl rounded-xl bg-gray-700 hover:bg-gray-600 transition duration-200"
+            data-pillar="1">
+            <span>1. Pilar Crítico: Gestión de Proyectos</span>
+            <svg
+              class="w-6 h-6 transform transition-transform duration-300 icon-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content content-1 border-t border-gray-600">
+            <div class="p-6">
+              <p class="text-gray-300 mb-4 font-medium">
+                **Objetivo:** Asegurar la entrega eficiente, puntual y dentro
+                del presupuesto de todas las iniciativas estratégicas.
+              </p>
+              <table class="min-w-full text-sm text-left text-gray-400">
+                <thead
+                  class="text-xs text-gray-200 uppercase bg-gray-600 rounded-t-lg">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="py-3 px-6 rounded-tl-lg">
+                      Enfoque
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 px-6">
+                      Metodologías
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 px-6 rounded-tr-lg">
+                      Argumentos Clave
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-700 border-b border-gray-600">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Control Financiero
+                    </td>
+                    <td class="py-4 px-6">
+                      Análisis de TCO (Total Cost of Ownership)
+                    </td>
+                    <td class="py-4 px-6">
+                      Experiencia justificando inversiones y midiendo el impacto
+                      a largo plazo de los proyectos.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-700 border-b border-gray-600">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Ejecución Ágil
+                    </td>
+                    <td class="py-4 px-6">Scrum, Kanban</td>
+                    <td class="py-4 px-6">
+                      Habilidad certificada como Scrum Master para dirigir
+                      equipos de alto rendimiento, manejar *backlogs* y
+                      priorizar con transparencia.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-700">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Visibilidad
+                    </td>
+                    <td class="py-4 px-6">
+                      Herramientas de seguimiento (Jira, Asana)
+                    </td>
+                    <td class="py-4 px-6">
+                      Establecimiento de métricas de desempeño (KPIs) y cuadros
+                      de mando para ofrecer visibilidad en tiempo real al
+                      liderazgo.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 2: Optimización de Procesos -->
+        <div
+          class="mb-4 bg-gray-700 rounded-xl shadow-xl transition duration-300 hover:shadow-blue-500/30">
+          <button
+            class="accordion-header flex justify-between items-center w-full p-6 text-left text-white font-semibold text-xl rounded-xl bg-gray-700 hover:bg-gray-600 transition duration-200"
+            data-pillar="2">
+            <span>2. Pilar Crítico: Optimización de Procesos</span>
+            <svg
+              class="w-6 h-6 transform transition-transform duration-300 icon-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content content-2 border-t border-gray-600">
+            <div class="p-6">
+              <p class="text-gray-300 mb-4 font-medium">
+                **Objetivo:** Estandarizar, medir y mejorar continuamente los
+                flujos de trabajo operativos para maximizar la calidad y la
+                eficiencia.
+              </p>
+              <table class="min-w-full text-sm text-left text-gray-400">
+                <thead
+                  class="text-xs text-gray-200 uppercase bg-gray-600 rounded-t-lg">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="py-3 px-6 rounded-tl-lg">
+                      Enfoque
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 px-6">
+                      Metodologías
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 px-6 rounded-tr-lg">
+                      Argumentos Clave
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-700 border-b border-gray-600">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Calidad y Estandarización
+                    </td>
+                    <td class="py-4 px-6">ISO 9001</td>
+                    <td class="py-4 px-6">
+                      Experiencia en el diseño e implementación de sistemas de
+                      gestión de calidad que cumplen con estándares
+                      internacionales.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-700 border-b border-gray-600">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Eficiencia Operativa
+                    </td>
+                    <td class="py-4 px-6">Lean Six Sigma</td>
+                    <td class="py-4 px-6">
+                      Capacidad para mapear procesos, identificar desperdicios
+                      (*Muda*) y aplicar principios *Lean* para reducir los
+                      tiempos de ciclo y mejorar el rendimiento.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-700">
+                    <td class="py-4 px-6 font-medium text-white">Tecnología</td>
+                    <td class="py-4 px-6">
+                      Automatización de Procesos Robóticos (RPA)
+                    </td>
+                    <td class="py-4 px-6">
+                      Habilidad para integrar herramientas de automatización
+                      para eliminar tareas manuales repetitivas y liberar al
+                      equipo para actividades de mayor valor.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 3: Gestión de Recursos Humanos (RRHH) -->
+        <div
+          class="bg-gray-700 rounded-xl shadow-xl transition duration-300 hover:shadow-red-500/30">
+          <button
+            class="accordion-header flex justify-between items-center w-full p-6 text-left text-white font-semibold text-xl rounded-xl bg-gray-700 hover:bg-gray-600 transition duration-200"
+            data-pillar="3">
+            <span>3. Pilar Crítico: Gestión de Recursos Humanos (RRHH)</span>
+            <svg
+              class="w-6 h-6 transform transition-transform duration-300 icon-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="accordion-content content-3 border-t border-gray-600">
+            <div class="p-6">
+              <p class="text-gray-300 mb-4 font-medium">
+                **Objetivo:** Desarrollar el talento, fomentar una cultura de
+                alto desempeño y asegurar una comunicación y resolución de
+                conflictos efectiva.
+              </p>
+              <table class="min-w-full text-sm text-left text-gray-400">
+                <thead
+                  class="text-xs text-gray-200 uppercase bg-gray-600 rounded-t-lg">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="py-3 px-6 rounded-tl-lg">
+                      Enfoque
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 px-6">
+                      Herramientas de Liderazgo
+                    </th>
+                    <th
+                      scope="col"
+                      class="py-3 px-6 rounded-tr-lg">
+                      Argumentos Clave
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-700 border-b border-gray-600">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Comunicación
+                    </td>
+                    <td class="py-4 px-6">
+                      PNL (Programación Neuro-Lingüística)
+                    </td>
+                    <td class="py-4 px-6">
+                      Uso de técnicas de comunicación avanzada para crear
+                      entendimiento, motivar al equipo y gestionar las
+                      expectativas de los *stakeholders*.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-700 border-b border-gray-600">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Desarrollo de Talento
+                    </td>
+                    <td class="py-4 px-6">Coaching y Mentoring</td>
+                    <td class="py-4 px-6">
+                      Implementación de planes de desarrollo individual (IDP) y
+                      estructuras de retroalimentación 360 para asegurar el
+                      crecimiento profesional continuo.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-700">
+                    <td class="py-4 px-6 font-medium text-white">
+                      Tecnología de Apoyo
+                    </td>
+                    <td class="py-4 px-6">Go/Lang (o Python)</td>
+                    <td class="py-4 px-6">
+                      Capacidad para desarrollar *scripts* o herramientas
+                      sencillas internamente, como encuestas de clima laboral o
+                      dashboards de métricas de RRHH, usando lenguajes modernos.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Función para manejar la lógica del acordeón
+      function setupAccordion() {
+        const headers = document.querySelectorAll(".accordion-header");
+
+        headers.forEach((header) => {
+          header.addEventListener("click", function () {
+            const pillarId = this.getAttribute("data-pillar");
+            const content = document.querySelector(`.content-${pillarId}`);
+            const icon = document.querySelector(`.icon-${pillarId}`);
+
+            // Toggle active class on clicked element
+            content.classList.toggle("active");
+            icon.classList.toggle("rotated-icon");
+
+            // Close other open sections
+            headers.forEach((otherHeader) => {
+              const otherPillarId = otherHeader.getAttribute("data-pillar");
+              if (otherPillarId !== pillarId) {
+                const otherContent = document.querySelector(
+                  `.content-${otherPillarId}`
+                );
+                const otherIcon = document.querySelector(
+                  `.icon-${otherPillarId}`
+                );
+                otherContent.classList.remove("active");
+                otherIcon.classList.remove("rotated-icon");
+              }
+            });
+          });
+        });
+      }
+
+      // Se ejecuta al cargar la ventana
+      window.onload = setupAccordion;
+    </script>
+  </body>
+</html>
